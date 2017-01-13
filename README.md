@@ -4,9 +4,8 @@ SENSE is an abstraction and controller synthesis tool for networked control syst
 
 SENSE expects existing abstracts of the plants inside NCS as input. It also expects infotmation about the delay bounds in the NCS. Then, it operates within the symbolic abstraction of the plants to construct a symbolic abstraction for NCS. Plats symbolic models can be easly constructed using a tool like [SCOTS](https://www.hcs.ei.tum.de/en/software/scots/).
 
-If you want to cite SENSE in a scientific paper, please cite its tool paper (currently archived version):
-
-- Mahmoud Khaled and Majid Zamani: _SENSE: Symbolic Modeling and Control for Networked Control Systems. [here](http://motesy.cs.uni-bremen.de/pdfs/cav2016.pdf)
+#If you want to cite SENSE in a scientific paper, please cite its tool paper (currently archived version):
+#- Mahmoud Khaled and Majid Zamani: _SENSE: Symbolic Modeling and Control for Networked Control Systems. [here](http://motesy.cs.uni-bremen.de/pdfs/cav2016.pdf)
 
 SENSE depends on the CUDD-3.0.0 library for manipulating BDDs, written by Fabio Somenzi [here](http://vlsi.colorado.edu/~fabio/). The _dddmp_ library is also used for reading and writing BDDs which already comes with CUDD.
 
