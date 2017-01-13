@@ -1,0 +1,36 @@
+---- 20161027-08:30:10 ---------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#232: tagOrId "f2" doesn't match any items
+    while executing
+".network.c raise submodext f2"
+
+
+---- 20161027-18:13:37 ---------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#652: ptr0x29a8b50 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector1.c ptr0x29a8b50 2"
+
+
+Tcl error: moduleinspector.cc#232: tagOrId "f2" doesn't match any items
+    while executing
+".inspector1.c raise submodext f2"
+
+
+---- 20161117-17:30:19 ---------------------------------------------------------
+
+
+Tcl error: tkutil.cc#524: floating point value is Not a Numbermatrix "{nan nan} {nan nan} {nan nan}" is inconsistent
+  while directly invoking Tcl command proc at 1
+  with args:  'dummy' 'itemconfig' 'f4' '-matrix' '{nan nan} {nan nan} {nan nan}'
+
+
+
