@@ -18,8 +18,8 @@ CUDDINC 		= -I$(CUDDPATH)/include
 CUDDLIBS		= -lcudd 
 CUDDLPATH   		= -L$(CUDDPATH)/lib
 
-TARGET1 = robot_ncs
-TARGET2 = robot_ncs_sim
+TARGET1 = tworobots_ncs
+TARGET2 = tworobots_ncs_sim
 
 all: $(TARGET1) $(TARGET2)
 

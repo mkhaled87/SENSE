@@ -18,7 +18,7 @@ CUDDINC 		= -I$(CUDDPATH)/include
 CUDDLIBS		= -lcudd 
 CUDDLPATH   		= -L$(CUDDPATH)/lib
 
-TARGET = pip_ncs
+TARGET = inver_ncs
 
 all: $(TARGET)
 

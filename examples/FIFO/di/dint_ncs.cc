@@ -29,12 +29,12 @@
 
 int main() {
   Cudd cuddManager;
-  cuddManager.AutodynEnable();
 
   cout << "Initiating the NCS Transition relation from the original relation ... " << endl;
   ncsFIFOTransitionRelation ncsState13(cuddManager, FILE_BDD_REL, ssDIM, isDIM, NSCMAX, NCAMAX);
   cout << "NCS relation intialized !" << endl;
 
+  cuddManager.AutodynEnable();
   cout << "Expanding transition relation ... " << endl;
   ncsState13.ExpandBDD();
   cout << "NCS relation expanded in " << ncsState13.getExpandTime() << " seconds !" << endl;

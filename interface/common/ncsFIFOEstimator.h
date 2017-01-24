@@ -40,7 +40,6 @@
             plant->initOde(tau);
         }
         ~ncsFIFOEstimator(){
-            delete plant;
         }
         
         Plant* getPlant(){

@@ -1,0 +1,220 @@
+Initiating the NCS Transition relation from the original relation ... 
+ReArranged BddVars:
+  q1qn: 0,17
+  x1xn: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16, 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33, 
+  u1um: 34 35 36 37 38 39 40 41, 42 43 44 45 46 47 48 49, 
+    ui: 50 51 52 53 54 55 56 57
+qd1qdn: 58,75
+xd1xdn: 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74, 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91, 
+ud1udm: 92 93 94 95 96 97 98 99, 100 101 102 103 104 105 106 107, 
+
+Warning::ncsTransitionRelation:: Your bddVars exceeds the bound of (size_t). You will have to do more job if you like to iterate on the transitions !
+NCS relation intialized !
+Expanding transition relation ... 
+The size of the new expanded relation is: 8.74785e+12
+NCS relation expanded in 36.9255 seconds !
+Computing recurrence controllers ... 
+Loading targets !
+a target loaded !
+a target loaded !
+a target loaded !
+a target loaded !
+going deeper !
+Expanding targets !
+a target expanded !
+a target expanded !
+a target expanded !
+a target expanded !
+FP Operations:
+starting FP !
+Check Target Sets!
+a target checked !
+a target checked !
+a target checked !
+a target checked !
+Iterations: Doing inner iterations !
+star out iteration !
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+star out iteration !
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+sub-inner started!
+Elapsed time is 81077.8 seconds.
+Controllers computed in 81077.8 seconds !
+Synthesized controller-1 is saved to the file: tworobots_contr1.nbdd
+Synthesized controller-2 is saved to the file: tworobots_contr2.nbdd
+Synthesized controller-3 is saved to the file: tworobots_contr3.nbdd
+Synthesized controller-4 is saved to the file: tworobots_contr4.nbdd
+

@@ -1,5 +1,5 @@
 /*
- * pip_ncs.cc
+ * dint_ncs.cc
  *
  *  created on: 31.08.2015
  *      author: M.Khaled
@@ -18,22 +18,22 @@
 #define isDIM 1
 
 /* NCS Delay bounds */
-#define NSCMAX 3
+#define NSCMAX 2
 #define NCAMAX 2
 
-#define FILE_BDD_REL "scots-files/pip_rel.bdd"
-#define FILE_BDD_TS "scots-files/pip_ts.bdd"
+#define FILE_BDD_REL "scots-files/sys_rel.bdd"
+#define FILE_BDD_TS "scots-files/sys_ts.bdd"
 
-#define FILE_NBDD_REL "pip_rel.nbdd"
+#define FILE_NBDD_REL "dcdc_rel.nbdd"
 
 int main() {
   Cudd cuddManager;
-  cuddManager.AutodynEnable();
 
   cout << "Initiating the NCS Transition relation from the original relation ... " << endl;
   ncsFIFOTransitionRelation ncsState13(cuddManager, FILE_BDD_REL, ssDIM, isDIM, NSCMAX, NCAMAX);
   cout << "NCS relation intialized !" << endl;
 
+  cuddManager.AutodynEnable();
   cout << "Expanding transition relation ... " << endl;
   ncsState13.ExpandBDD();
   cout << "NCS relation expanded in " << ncsState13.getExpandTime() << " seconds !" << endl;
