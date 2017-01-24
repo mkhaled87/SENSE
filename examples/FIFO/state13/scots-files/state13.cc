@@ -182,5 +182,6 @@ void sys_post(state_type &x, input_type &u)
 /* computation of the growth bound (the result is stored in r)  */
 void r_post (state_type &r, input_type &u)
 {
+	u[0]=u[0];
 	r[0] = 0;
 }

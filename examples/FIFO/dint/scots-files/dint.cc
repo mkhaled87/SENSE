@@ -60,6 +60,7 @@ auto radius_post = [](state_type &r, input_type &u) -> void {
   };
   ode_solver(growth_bound_ode,r,u);
   */
+   u[0]=u[0];
   r[0]=0;
   r[1]=0;
 };

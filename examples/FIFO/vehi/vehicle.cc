@@ -21,10 +21,7 @@
 #define NCAMAX 2
 
 #define FILE_BDD_REL "scots-files/vehicle_rel.bdd"
-#define FILE_BDD_TS "scots-files/vehicle_ts.bdd"
-
 #define FILE_NBDD_REL "vehicle_rel.nbdd"
-#define FILE_NBDD_CONTR "vehicle_contr.nbdd"
 
 int main() {
   Cudd cuddManager;
@@ -39,13 +36,6 @@ int main() {
   cout << "NCS relation expanded in " << ncsState13.getExpandTime() << " seconds !" << endl;
   ncsState13.WriteToFile(FILE_NBDD_REL);
   cout << "New expanded transition relation is saved to the file: " << FILE_NBDD_REL << endl;
-
-  
-  cout << "Computing a reach controller ... " << endl;
-  ncsController ncsContr = ncsState13.ComputeReachController(FILE_BDD_TS);
-  cout << "Controller computed in " << ncsContr.getControllerComputeTile() << " seconds !" << endl;
-  ncsContr.WriteToFile(FILE_NBDD_CONTR);
-  cout << "Synthesized controller is saved to the file: " << FILE_NBDD_CONTR << endl;
 
   return 1;
 }

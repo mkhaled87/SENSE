@@ -14,7 +14,7 @@
 #include "SENSE.hh"
 
 /* state-space / input-space dimensions */
-#define ssDIM 3
+#define ssDIM 4
 #define isDIM 1
 
 /* NCS Delay bounds */

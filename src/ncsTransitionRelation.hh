@@ -662,10 +662,6 @@ public:
 		vector<BDD> vC = fp.recurrence_conj(f_targets,1);
 		ComputeContrTime = StopWatch::Stop();
 
-	#ifdef VERBOSE
-		BDDUtils::PrintBDD("The Controller:", C);
-	#endif
-
 		vector<ncsController> vContr;
 		for(size_t i=0; i<f_org_targets.size(); i++){
 			ncsController contr(*pCuddManager, vC[i], getSourceStateTemplate(), ui, ComputeContrTime);

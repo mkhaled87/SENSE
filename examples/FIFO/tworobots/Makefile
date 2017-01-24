@@ -18,20 +18,16 @@ CUDDINC 		= -I$(CUDDPATH)/include
 CUDDLIBS		= -lcudd 
 CUDDLPATH   		= -L$(CUDDPATH)/lib
 
-TARGET1 = tworobots_ncs
-TARGET2 = tworobots_ncs_sim
+TARGET = tworobots_ncs
 
-all: $(TARGET1) $(TARGET2)
+all: $(TARGET)
 
 %.o:%.cc
 	$(CC) -c $(CXXFLAGS) $(CUDDINC) $(NCSACTINC) $< -o $@
 
-$(TARGET1): $(TARGET1).o
-	$(CC) $(CXXFLAGS) -o $(TARGET1) $(TARGET1).o $(CUDDLPATH) $(CUDDLIBS)
-
-$(TARGET2): $(TARGET2).o
-	$(CC) $(CXXFLAGS) -o $(TARGET2) $(TARGET2).o $(CUDDLPATH) $(CUDDLIBS)
+$(TARGET): $(TARGET).o
+	$(CC) $(CXXFLAGS) -o $(TARGET) $(TARGET).o $(CUDDLPATH) $(CUDDLIBS)
 
 
 clean:
-	rm  ./$(TARGET1)  ./$(TARGET1).o ./$(TARGET2)  ./$(TARGET2).o
+	rm  ./$(TARGET)  ./$(TARGET).o

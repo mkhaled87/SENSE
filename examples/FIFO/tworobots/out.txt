@@ -12,7 +12,7 @@ Warning::ncsTransitionRelation:: Your bddVars exceeds the bound of (size_t). You
 NCS relation intialized !
 Expanding transition relation ... 
 The size of the new expanded relation is: 8.74785e+12
-NCS relation expanded in 36.9255 seconds !
+NCS relation expanded in 21.5168 seconds !
 Computing recurrence controllers ... 
 Loading targets !
 a target loaded !
@@ -211,8 +211,8 @@ sub-inner started!
 sub-inner started!
 sub-inner started!
 sub-inner started!
-Elapsed time is 81077.8 seconds.
-Controllers computed in 81077.8 seconds !
+Elapsed time is 89812.5 seconds.
+Controllers computed in 89812.5 seconds !
 Synthesized controller-1 is saved to the file: tworobots_contr1.nbdd
 Synthesized controller-2 is saved to the file: tworobots_contr2.nbdd
 Synthesized controller-3 is saved to the file: tworobots_contr3.nbdd

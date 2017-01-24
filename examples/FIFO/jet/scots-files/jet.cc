@@ -38,6 +38,7 @@ auto  sys_post = [](state_type &x, input_type &u) -> void {
 
   /* the ode describing the vehicle */
   auto rhs =[](state_type& xx,  const state_type &x, input_type &u) {
+
       xx[0] = -x[1] -1.5*x[0]*x[0] -0.5*x[0]*x[0]*x[0];
       xx[1] = (1/omega_squared)*(x[0] - u[0]);
   };
@@ -60,6 +61,7 @@ auto sys_growth_bound = [](state_type &r, input_type &u) {
 	eLtau[1][0] = tau*((eLtau_1-eLtau_2)/(std::sqrt(eLtau_3)));
 	eLtau[1][1] = tau*((eLtau_1*std::sqrt(eLtau_3) + eLtau_2*std::sqrt(eLtau_3)+a*(eLtau_1+eLtau_2))/(2.0*std::sqrt(eLtau_3)));
 
+        u[0]=u[0];
 	r[0] = r[0]*eLtau[0][0] + r[1]*eLtau[0][1];
 	r[1] = r[0]*eLtau[1][0] + r[1]*eLtau[1][1];
 };

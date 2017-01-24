@@ -15,7 +15,7 @@
 % are created
 %
 
-function tworobots
+function robot
 clear set
 close all
 

@@ -61,6 +61,7 @@ auto  sys_post = [](state_type &s, input_type &u) -> void {
 
 /* computation of the growth bound (the result is stored in r)  */
 auto radius_post = [](state_type &r, input_type &u) -> void {
+    u[0]=u[0];
     r[0] = 0.1;
     r[1] = 0.4;
     r[2] = 0.6;

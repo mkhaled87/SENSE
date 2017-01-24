@@ -43,6 +43,8 @@ auto  robot_post = [](state_type &x, input_type &u) -> void {
 
   /* the ode describing the robot */
   auto rhs =[](state_type& xx,  const state_type &x, input_type &u) -> void {     
+      double x0=x[0];
+      x0=x0-1;
       xx[0] = u[0];
       xx[1] = u[1];
   };
@@ -51,6 +53,7 @@ auto  robot_post = [](state_type &x, input_type &u) -> void {
 
 /* computation of the growth bound (the result is stored in r)  */
 auto radius_post = [](state_type &r, input_type &u) -> void {
+    u[0]=u[0];
     r[0] = 0;
     r[1] = 0;
 };

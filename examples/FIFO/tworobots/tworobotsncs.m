@@ -37,7 +37,7 @@ Nscmax = 2;
 Ncamax = 2;
 
 % the NCS state reconstructor
-StateReconstructor =  FIFOStateReconstructor(Nscmax, Ncamax, u0', @robot_ode, tau);
+StateReconstructor =  FIFOStateReconstructor(Nscmax, Ncamax, u0, @robot_ode, tau);
 
 disp('loading the controllers NBD files ... ');
 contr1=ncsFIFOController('tworobots_contr1.nbdd');
@@ -90,8 +90,8 @@ drawnow
 buffer_sc = cell(ssDim,Nscmax);
 buffer_ca = cell(isDim,Ncamax); 
 
-  for k=1:length(buffer_ca)
-    buffer_ca(:,k)=num2cell(u0);
+  for k=1:size(buffer_ca,2)
+    buffer_ca(:,k)=num2cell(u0');
   end
 
   for t=1:SIM_STEPS
@@ -101,8 +101,8 @@ buffer_ca = cell(isDim,Ncamax);
     
     % are we ready to construct the xBig ?
     if(isempty(buffer_sc{end, end}))
-        StateReconstructor.pushQ(u0);
-        u = u0;        
+        StateReconstructor.pushQ(u0);        
+        u = u0';     
     else
         StateReconstructor.pushState([buffer_sc{1,end} buffer_sc{2,end} buffer_sc{3,end} buffer_sc{4,end}], ...
             [buffer_ca{1,1} buffer_ca{2,1} buffer_ca{3,1} buffer_ca{4,1}]);
@@ -176,7 +176,7 @@ buffer_ca = cell(isDim,Ncamax);
     
     % selecting one u from the offered inputs
     %u_selected = u(:,ceil(rand*size(u,2)));
-    u_selected = u(1,:)';    
+    u_selected = u(:,1); 
     u_at_sys = cell2mat(buffer_ca(:, end))';
     
     % NCS: filling ca channel
