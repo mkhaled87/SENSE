@@ -67,9 +67,7 @@ SENSE is built by examples. This means each example code that includes SENSE wil
 For instance, to build the example (vehicle_half3) corresponding to a vehicle dynamics within an arena with three obstacles:
 
 > cd examples/FIFO/vehicle_half3
-
 > make
-
 > ./vehicle
 
 You are first advised to check that the accompanying folder 'scots-files' has the BDD files for the plant inside NCS generated. If not, you need to build it and run it first. You will then need the tool SCOTS for this.
