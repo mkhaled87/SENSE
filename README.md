@@ -5,12 +5,22 @@ It facilitates constructing finite abstraction and synthesizing symbolic control
 It uses binary decision diagrams (BDDs) as the primary data structure for efficient symbolic abstraction construction. 
 
 SENSE expects existing finite abstracts (a.k.a. symbolic models) of the plants inside NCS as input. 
-It also expects information about the delay bounds in the NCS. 
-Then, it uses the abstraction of the plant to construct an abstraction for NCS. 
+It also expects information about the delay bounds in the NCS and the specification to be enforced on the plants of NCS. 
+It uses the abstraction of the plant to construct an abstraction for NCS. 
 Plants' symbolic models can be easily constructed using a tool like [SCOTS](https://www.hcs.ei.tum.de/en/software/scots/), which is provided with SENSE.
+Then, the tool constructs provably-correct controllers that satisfy the given specification.
 
 SENSE depends on the CUDD-3.0.0 library for manipulating BDDs, written by Fabio Somenzi [here](http://vlsi.colorado.edu/~fabio/). 
 The _dddmp_ library is also used for reading and writing BDDs which already comes with CUDD.
+
+The tool has an experimental nature.
+It serves as a host for several lasses of NCS and facilitates the following:
+
+1- Constructing symbolic models of NCS.
+2- Synthesizing controllers.
+3- Testing the constructed abstractions and the synthesized controllers.
+4- Simulating and visualizing the closed-loop of the NCS/controller.
+5- Automatic code generation for final real-world implementation.
 
 
 Internal Structure of SENSE
@@ -72,7 +82,7 @@ SENSE is built by examples. This means each example code that includes SENSE wil
 
 For instance, to build the example (vehicle_half3) corresponding to a vehicle dynamics within an arena with three obstacles:
 
-> cd examples/FIFO/vehicle_half3
+> cd examples/prolonged_ncs/vehicle_half3
 
 > make
 
