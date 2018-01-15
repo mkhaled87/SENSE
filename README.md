@@ -1,10 +1,16 @@
 SENSE - Symbolic controlEr for Networked SystEms
 ================================================
-SENSE is an abstraction and controller synthesis tool for networked control systems (NCS). It uses binary decision diagrams (BDDs) as the primary data structure for efficient symbolic abstraction construction. 
+SENSE is an experimental framework for the correct-by-construction controller synthesis for networked control systems (NCS).
+It facilitates constructing finite abstraction and synthesizing symbolic controller using the plants of NCS. 
+It uses binary decision diagrams (BDDs) as the primary data structure for efficient symbolic abstraction construction. 
 
-SENSE expects existing abstracts of the plants inside NCS as input. It also expects infotmation about the delay bounds in the NCS. Then, it operates within the symbolic abstraction of the plants to construct a symbolic abstraction for NCS. Plats symbolic models can be easly constructed using a tool like [SCOTS](https://www.hcs.ei.tum.de/en/software/scots/).
+SENSE expects existing finite abstracts (a.k.a. symbolic models) of the plants inside NCS as input. 
+It also expects information about the delay bounds in the NCS. 
+Then, it uses the abstraction of the plant to construct an abstraction for NCS. 
+Plants' symbolic models can be easily constructed using a tool like [SCOTS](https://www.hcs.ei.tum.de/en/software/scots/), which is provided with SENSE.
 
-SENSE depends on the CUDD-3.0.0 library for manipulating BDDs, written by Fabio Somenzi [here](http://vlsi.colorado.edu/~fabio/). The _dddmp_ library is also used for reading and writing BDDs which already comes with CUDD.
+SENSE depends on the CUDD-3.0.0 library for manipulating BDDs, written by Fabio Somenzi [here](http://vlsi.colorado.edu/~fabio/). 
+The _dddmp_ library is also used for reading and writing BDDs which already comes with CUDD.
 
 
 Internal Structure of SENSE
