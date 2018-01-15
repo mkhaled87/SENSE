@@ -28,9 +28,14 @@ class psmController{
 
 	vector<size_t> xu_dimensions;
 public:
-	psmController(Cudd& cuddManager, const char* plantSMFile, const char* controllerFile, size_t ssDIM_, size_t isDIM_, size_t NSC_, size_t NCA_){
+	psmController(Cudd& cuddManager, const char* plantSMFile, const char* controllerFile, size_t ssDIM_, size_t isDIM_, size_t NSC_, size_t NCA_, bool doPlantInDifferentBDDVars = false){
 		symSetPlant = new SymbolicSet();
-		symSetPlant->LoadFromFile(cuddManager, plantSMFile);
+		
+		if(doPlantInDifferentBDDVars)
+			symSetPlant->LoadFromFile(cuddManager, plantSMFile, 1);
+		else
+			symSetPlant->LoadFromFile(cuddManager, plantSMFile);
+		
 		ncsCont = new ncsController(cuddManager, controllerFile);
 
 		NSC = NSC_;

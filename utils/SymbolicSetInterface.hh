@@ -19,6 +19,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdexcept>
+#include <iomanip>
 
 #include "dddmp.h"
 #include "cuddObj.hh"
@@ -1030,6 +1031,42 @@ public:
     else
       return false;
   } 
+  
+  
+  /* function: elementToMinterm
+   *
+   * converts an element to a minterm
+   *  
+   *  x -- x is an element of the domain
+   *
+   */
+  void elementToMinterm(vector<int>& minterm, const vector<double> x) {
+    if(!(x.size()==dim_)) {
+      ostringstream os;
+      os << "Error: SymbolicSet::isElement(x): x must be of size dim_.";
+      throw invalid_argument(os.str().c_str());
+    }
+    
+    minterm.clear();
+    for(size_t i=0; i<dim_; i++) {
+      int *phase = new int[nofBddVars_[i]];
+      
+	  for(size_t j=0;j<nofBddVars_[i];j++)
+        phase[j]=0;
+     
+      int *p=phase;
+	  
+      int idx=lround((x[i]-firstGridPoint_[i])/eta_[i]);
+	  
+      for (; idx; idx/=2) 
+	    *(p++)=0+idx%2;
+		
+	  for(size_t j=0;j<nofBddVars_[i];j++)
+        minterm.push_back(phase[j]);
+      
+      delete[] phase;
+    }
+  }   
 
 
   /*
@@ -1484,5 +1521,7 @@ public:
 		}
 	}
 }; /* class SymbolicSetInterface */
+
+
 
 #endif /* SYMBOLICSETINTERFACE_HH_ */

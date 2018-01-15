@@ -21,7 +21,7 @@ NCSACTINC		= -I$(NCSACTROOT)/src -I$(NCSACTROOT)/utils
 CUDDPATH		=  /opt/local/
 CUDDINC 		= -I$(CUDDPATH)/include
 CUDDLIBS		= -lcudd 
-CUDDLPATH   		= -L$(CUDDPATH)/lib
+CUDDLPATH   	= -L$(CUDDPATH)/lib
 
 
 TARGET1 			= mexNcsController

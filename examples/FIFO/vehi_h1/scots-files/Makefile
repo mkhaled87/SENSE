@@ -7,7 +7,7 @@ CXXFLAGS 		= -Wall -Wextra -std=c++11 -O3 -DNDEBUG
 #
 # scots 
 #
-SCOTSROOT		= ../../../../../scots
+SCOTSROOT		= ../../../../lib/scots
 SCOTSINC		= -I$(SCOTSROOT)/bdd -I$(SCOTSROOT)/utils 
 
 #
