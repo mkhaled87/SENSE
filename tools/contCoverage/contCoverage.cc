@@ -1,7 +1,7 @@
 /*
  * contCoverage.cc
  *
- *  created on: 31.08.2015
+ *  created on: 01.11.2017
  *      author: m.khaled
  *
  *********************************************************
@@ -14,7 +14,7 @@
 #include "cuddObj.hh"
 #include "ncsACT.hh"
 
-#define NBDD_FILE_CONTR "../../examples/FIFO/vehicle_half3/vehicle_contr.nbdd"
+#define NBDD_FILE_CONTR "../../examples/prolonged_ncs/vehicle_h3/vehicle_contr.nbdd"
 
 int main() {
   Cudd cuddManager;

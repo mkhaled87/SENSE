@@ -12,21 +12,36 @@ Internal Structure of SENSE
 
 File structure:
 
+- doc/ - The manual of SENSE.
 - examples/ - The pre krafted examples.
 - interface/ - MATLAB and OMNeT++ interface classes.
-- src/ - The classes of SENSE.
-- utils/ - Utility classes for SENSE.
+- lib/ - The libraries used SENSE and its examples.
+- src/ - The main C++ classes of SENSE.
+- tools/ - A sety of helper tools for SENSE.
+- utils/ - Utility C++ classes for SENSE.
+
 
 SENSE has a couple of classes in the 'src' folder:
 
 - ncsState - The class representing a NCS state consisting of some plants' states, inputs and delay information.
 - ncsTransitionRelation - The class representing the transition relation in a NCS.
 - ncsController - The class encapsulating the NCS synthesized controller.
+- ncsFixPoint - The class contains source code of the Fixedpoint operations on BDDs to synthesize the symbolic controllers.
 
 There is also a some utility classes/files helping SENSE to work, most of them are in the 'utils' folder:
 
 - ncsFixPoint - For fixed point operations with BDD objects.
 - SymbolicSetInterface - For interfacing BDD files from SCOTS.
+
+
+SENSE comes also with some helper tools in the 'tools' folder:
+
+- bdd2implement - A tool to automatically generate C++/VHDL/Verilog codes from the synthesized BDD-based controllers.
+- abstractNcs - A tool to construct the BDD-based symbolic model of the NCS from the BDD-symbolic model of the plant in the NCS.
+- bdd2fsm - A tool to generate a .fsm file from the BDD representing a transition relation. Used to visualize the system using Giphy.
+- bdddump - A tool that dumps the information in any BDD file.
+- contCoverage - A tool that visualizes in terminal the coverage of 2-D symbolic controllers generated from SENSE.
+
 
 
 Installation
@@ -36,9 +51,9 @@ Requirements
 ------------
 - A C++ and C compiler installed and accesible in a Unix-like environment. Linux and MacOS should be fine. Windows with Ubuntu bash or MSYS-2 is also OK.
 - An installation of the CUDD-3.0.0 library.
-- The tool is needed to construct original symbolic models of the plants inside NCS.
-- MATLAB: you need to do a closed-loop simulation of the synthesized controller with the NCS.
-- OMNeT++: you need to do a closed-loop simulation/visualization of the synthesized controller with the NCS.
+- The tool SCOTS is needed to construct original symbolic models of the plants inside NCS. It is contained in SENSE in the /lib folder.
+- MATLAB: needed to do a closed-loop simulation of the synthesized controller with the NCS.
+- OMNeT++: needed to do a closed-loop simulation/visualization of the synthesized controller with the NCS.
 
 Using SENSE
 -----------

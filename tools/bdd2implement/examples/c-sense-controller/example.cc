@@ -20,7 +20,7 @@
 #define ncs_ssDIM ((ssDIM*NSC_MAX)+(isDIM*NSC_MAX))
 
 
-#define NBDD_FILE "../../../../bdd/examples/FIFO/robot/robot_contr.nbdd"
+#define NBDD_FILE "../../../../examples/prolonged_ncs/robot/robot_contr.nbdd"
 #define DCONTR_FILE "robot_controller_determinized.bdd"
 #define OUT_C_FILE "robot_bdd_functions.h"
 

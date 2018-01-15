@@ -1,7 +1,7 @@
 /*
  * sysExplorer.cc
  *
- *  created on: 31.08.2015
+ *  created on: 31.08.2017
  *      author: m.khaled
  *
  *********************************************************
@@ -15,8 +15,8 @@
 #include "cuddObj.hh"
 #include "SENSE.hh"
 
-#define NBDD_FILE_REL 	"../../examples/vehicle2_half_smalltarget/vehicle_rel.nbdd"
-#define NBDD_FILE_CONTR "../../examples/vehicle2_half_smalltarget/vehicle_contr.nbdd"
+#define NBDD_FILE_REL 	"../../examples/prolonged_ncs/vehicle2_h3/vehicle_rel.nbdd"
+#define NBDD_FILE_CONTR "../../examples/prolonged_ncs/vehicle2_h3/vehicle_contr.nbdd"
 
 int main() {
   Cudd cuddManager;

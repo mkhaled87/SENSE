@@ -1,1 +1,0 @@
-This is an exxample of using SENSE and saving the output as BDD compatible with SCOTS v2.0.
