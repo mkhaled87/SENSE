@@ -16,11 +16,11 @@ The _dddmp_ library is also used for reading and writing BDDs which already come
 The tool has an experimental nature.
 It serves as a host for several lasses of NCS and facilitates the following:
 
-1- Constructing symbolic models of NCS.
-2- Synthesizing controllers.
-3- Testing the constructed abstractions and the synthesized controllers.
-4- Simulating and visualizing the closed-loop of the NCS/controller.
-5- Automatic code generation for final real-world implementation.
+- Constructing symbolic models of NCS.
+- Synthesizing controllers.
+- Testing the constructed abstractions and the synthesized controllers.
+- Simulating and visualizing the closed-loop of the NCS/controller.
+- Automatic code generation for final real-world implementation.
 
 
 Internal Structure of SENSE
