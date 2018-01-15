@@ -14,7 +14,7 @@ SENSE depends on the CUDD-3.0.0 library for manipulating BDDs, written by Fabio 
 The _dddmp_ library is also used for reading and writing BDDs which already comes with CUDD.
 
 The tool has an experimental nature.
-It serves as a host for several lasses of NCS and facilitates the following:
+It serves as a host for several classes of NCS and facilitates the following:
 
 - Constructing symbolic models of NCS.
 - Synthesizing controllers.
