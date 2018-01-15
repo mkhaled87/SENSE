@@ -47,6 +47,11 @@ SENSE comes also with some helper tools in the 'tools' folder:
 Installation
 ============
 
+SENSE comes in the form of header files. 
+Users compile any of the provided examples or compose their own examples and then run them.
+Examples generate symbolic controller files that can be simulated using one of the provided interfaces.
+Also, an implementation C++/VHDL/Verilog code can be generated automatically from the synthesized NCS controllers using the provided helper tool 'tools/bdd2implement'.
+
 Requirements
 ------------
 - A C++ and C compiler installed and accesible in a Unix-like environment. Linux and MacOS should be fine. Windows with Ubuntu bash or MSYS-2 is also OK.
