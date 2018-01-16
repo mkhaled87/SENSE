@@ -14,6 +14,7 @@
 #include "CuddMintermIterator.hh"
 #include "Misc.hh"
 #include "ncsState.hh"
+#include "SCOTS2Interface.hh"
 
 #define NCS_CONTR_REMARKS_TEXT "NCS Synthesized Controller"
 
@@ -177,6 +178,29 @@ public:
 					ss.str().c_str(),
 					outFile.c_str());
 	}
+	
+	void WriteToSCOTS2File(const char* OUT_FILE_CONTR){
+		
+		double bigstate_bddVarsCount = sourceState->getBddVarsCount();
+		double input_bddVarsCount = inpVars.size();
+		
+		size_t dim = 2;
+		std::vector<double> lb,ub,eta;
+		
+		lb.push_back(0);
+		lb.push_back(0);
+		
+		eta.push_back(1);
+		eta.push_back(1);
+		
+		ub.push_back(pow (2.0, bigstate_bddVarsCount));
+		ub.push_back(pow (2.0, input_bddVarsCount));
+		
+		SCOTS2_SymbolicSet contrDomain(*pCuddManager, dim, lb.data(), ub.data(), eta.data());
+		
+		std::string fileName = OUT_FILE_CONTR;
+		SCOTS2_IO::write_to_file(*pCuddManager, contrDomain, bddContr, fileName);
+	}	
 
 	vector<vector<double>> getInputs(vector<double>& XU_values, vector<int>& q_values){
 		
