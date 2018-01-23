@@ -21,9 +21,8 @@ CUDDLPATH   = -L$(CUDDPATH)/lib
 TARGET1 = vehicle
 TARGET2 = vehicle_fine_1_tau
 TARGET3 = vehicle_fine_NCSMAX_tau
-TARGET4 = vehicle_easy_error
 
-all: $(TARGET1) $(TARGET2) $(TARGET3) $(TARGET4)
+all: $(TARGET1) $(TARGET2) $(TARGET3)
 
 %.o:%.cc
 	$(CC) -c $(CXXFLAGS) $(CUDDINC) $(SCOTSINC) $< -o $@
@@ -36,12 +35,8 @@ $(TARGET2): $(TARGET2).o
 	
 $(TARGET3): $(TARGET3).o
 	$(CC) $(CXXFLAGS) -o $(TARGET3) $(TARGET3).o $(CUDDLPATH) $(CUDDLIBS)		
-	
-$(TARGET4): $(TARGET4).o
-	$(CC) $(CXXFLAGS) -o $(TARGET4) $(TARGET4).o $(CUDDLPATH) $(CUDDLIBS)
 
 clean:
 	rm  ./$(TARGET1)  ./$(TARGET1).o
 	rm  ./$(TARGET2)  ./$(TARGET2).o
 	rm  ./$(TARGET3)  ./$(TARGET3).o	
-	rm  ./$(TARGET4)  ./$(TARGET4).o		

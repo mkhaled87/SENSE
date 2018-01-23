@@ -24,7 +24,6 @@ close all
 % target set
 lb=[4 0];
 ub=lb+0.5;
-tau=0.3;
 
 % initial state
 x0=[0.4 4.4 0];
@@ -46,7 +45,7 @@ while(1)
   if (target.isElement(y(end,:)))
     break;
   end 
-  [t x]=ode45(@vehicle_ode,[0 tau], y(end,:),[],u_rand);
+  [t x]=ode45(@vehicle_ode,[0 .3], y(end,:),[],u_rand);
 
   y=[y; x(end,:)];
 end
@@ -76,6 +75,8 @@ plotCells(set,'facecolor',colors(2,:)*0.5+0.5,'edgec',colors(2,:),'linew',.1)
 plot(y(:,1),y(:,2),'k.-')
 plot(y(1,1),y(1,2),'.','color',colors(5,:),'markersize',20)
 
+box on
+axis([-.5 5.5 -.5 5.5])
 
 end
 
