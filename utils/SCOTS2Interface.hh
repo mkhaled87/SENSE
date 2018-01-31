@@ -20,6 +20,7 @@
 #include <fstream>
 #include <stdexcept>
 #include <iomanip>
+#include <memory>
 
 #include "dddmp.h"
 #include "cuddObj.hh"
