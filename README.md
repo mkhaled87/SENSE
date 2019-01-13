@@ -68,6 +68,10 @@ Users compile any of the provided examples or compose their own examples and the
 Examples generate symbolic controller files that can be simulated using one of the provided interfaces.
 Also, an implementation C++/VHDL/Verilog code can be generated automatically from the synthesized NCS controllers using the provided helper tool 'tools/bdd2implement'.
 
+You may also watch the follwoing video showing the basic installation of SENSE and running one example:
+
+[![SENSE: installation and example](https://img.youtube.com/vi/YBsFgyymR9s/0.jpg)](https://www.youtube.com/watch?v=YBsFgyymR9s)
+
 Requirements
 ------------
 - A C++ and C compiler installed and accesible in a Unix-like environment. Linux and MacOS should be fine. Windows with Ubuntu bash or MSYS-2 is also OK.
